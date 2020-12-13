@@ -7,7 +7,7 @@ const config = {
     },
     "dev": {
         port: 3000,
-        serverAddress: 'http://localhost:3000'
+        serverAddress: 'https://testdev2088.herokuapp.com'
     },
     "production": {
         port: process.env.PORT || 15565

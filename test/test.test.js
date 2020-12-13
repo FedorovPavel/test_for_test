@@ -1,5 +1,4 @@
 const chai = require('chai');
-const mocha = require('mocha');
 const chaiHttp = require('chai-http');
 const config = require('./../config/config');
 const serverAddress = config.serverAddress;
