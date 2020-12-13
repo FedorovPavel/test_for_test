@@ -18,7 +18,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
-    "intTest": "NODE_ENV=ci mocha -u bdd --timeout 999999 --colors --exit --recursive test"
+    "intTest": "NODE_ENV=intTest mocha -u bdd --timeout 999999 --colors --exit --recursive test"
   },
   "repository": {
     "type": "git",

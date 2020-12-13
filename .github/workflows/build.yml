@@ -37,6 +37,6 @@ jobs:
         run: npm i -g mocha
 
       - name: Start tests
-        run: npm run intTest
+        run: npm start
         env: 
           NODE_ENV: intTest
