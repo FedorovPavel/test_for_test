@@ -19,11 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: 
-          npm i
+          npm install
           npm i -g mocha
-          npm i -g chai
-          
-
 
       - name: Start CI
         run: npm run ci
