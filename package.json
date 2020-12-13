@@ -16,7 +16,8 @@
     "supertest": "^6.0.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "ci": "NODE_ENV=ci mocha -u bdd --timeout 999999 --colors --exit --recursive test"
   },
   "repository": {
     "type": "git",
