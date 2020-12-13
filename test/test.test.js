@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const config = require('./../config/config');
+console.log(`ENV: ${process.env.NODE_ENV}`);
 const serverAddress = config.serverAddress;
 chai.use(chaiHttp);
 
