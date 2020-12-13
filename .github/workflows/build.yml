@@ -22,7 +22,7 @@ jobs:
           npm install
           npm i -g mocha
 
-      - name: Start CI
+      - name: Start tests
         run: npm run intTest
         env: 
           NODE_ENV: intTest
