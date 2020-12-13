@@ -21,8 +21,9 @@ jobs:
         run: 
           npm i
           npm i -g mocha
-          npm i -s chai
+          npm i -g chai
           
+
 
       - name: Start CI
         run: npm run ci
