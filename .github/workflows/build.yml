@@ -23,6 +23,6 @@ jobs:
           npm i -g mocha
 
       - name: Start CI
-        run: npm run ci
+        run: npm run intTest
         env: 
-          NODE_ENV: ci
+          NODE_ENV: intTest

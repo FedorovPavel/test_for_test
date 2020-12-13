@@ -16,7 +16,7 @@ const config = {
         port: process.env.PORT || 15565,
         serverAddress: 'https://testdev2088.herokuapp.com'
     },
-    "ci": {
+    "intTest": {
         port: process.env.PORT || 15565,
         serverAddress: 'https://testdev2088.herokuapp.com'
     }
