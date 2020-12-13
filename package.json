@@ -7,11 +7,11 @@
     "test": "test"
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "nodemailer": "^6.4.17"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "mocha": "^8.2.1",
     "supertest": "^6.0.1"
   },
