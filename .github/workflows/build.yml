@@ -18,9 +18,10 @@ jobs:
           node-version: "12.x"
 
       - name: Install dependencies
-        run: 
-          npm install
-          npm i -g mocha
+        run: npm install
+
+      - name: Install mocha global
+        run: npm i -g mocha
 
       - name: Start tests
         run: npm run intTest
