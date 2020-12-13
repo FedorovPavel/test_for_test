@@ -4,6 +4,7 @@ var Mocha = require('mocha'),
     fs = require('fs'),
     path = require('path');
 
+    
 // Instantiate a Mocha instance.
 var mocha = new Mocha();
 var testDir = 'test'
