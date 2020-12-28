@@ -1,9 +1,18 @@
 process.env.NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV: 'test';
 console.log(`ENV : ${process.env.NODE_ENV}`);
-var Mocha = require('mocha'),
-    fs = require('fs'),
-    path = require('path');
+const Mocha = require('mocha');
+const fs = require('fs'),
+const path = require('path');
 
+const config = require('./config/config');
+const glob = require('glob');
+const mongoose = require('mongoose');
+
+mongoose.connect(config.db);
+const db = mongoose.connection;
+db.on('error', () => {
+    throw new Error('unable to connect to database at ' + config.db);
+});
     
 // Instantiate a Mocha instance.
 var mocha = new Mocha();
@@ -24,4 +33,5 @@ mocha
     .timeout(99999)
     .run(function (failures) {
         process.exitCode = failures ? 1 : 0;  // exit with non-zero status if there were failures
+        db.close();
     });

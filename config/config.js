@@ -18,7 +18,8 @@ const config = {
     },
     "intTest": {
         port: process.env.PORT || 15565,
-        serverAddress: 'https://testdev2088.herokuapp.com'
+        serverAddress: 'https://testdev2088.herokuapp.com',
+        db: 'mongodb://test:5p109d@cluster0-shard-00-00.5mapr.mongodb.net:27017,cluster0-shard-00-01.5mapr.mongodb.net:27017,cluster0-shard-00-02.5mapr.mongodb.net:27017/course?ssl=true&replicaSet=atlas-3z9frj-shard-0&authSource=admin&retryWrites=true&w=majority'
     }
 }
 
