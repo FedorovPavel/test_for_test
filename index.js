@@ -1,27 +1,27 @@
 process.env.NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV: 'test';
 console.log(`ENV : ${process.env.NODE_ENV}`);
-var Mocha = require('mocha');
-var fs = require('fs'),
-var path = require('path');
+const Mocha = require('mocha');
+const fs = require('fs');
+const path = require('path');
 
-var config = require('./config/config');
-var glob = require('glob');
-var mongoose = require('mongoose');
+const config = require('./config/config');
+const glob = require('glob');
+const mongoose = require('mongoose');
 
 mongoose.connect(config.db);
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', () => {
     throw new Error('unable to connect to database at ' + config.db);
 });
 
-var models = glob.sync(config.root + '/app/models/*.js');
+const models = glob.sync(config.root + '/app/models/*.js');
 models.forEach(function (model) {
     require(model);
 });
     
 // Instantiate a Mocha instance.
-var mocha = new Mocha();
-var testDir = 'test'
+const mocha = new Mocha();
+const testDir = 'test'
 
 // Add each .js file to the mocha instance
 fs.readdirSync(testDir).filter(function (file) {
