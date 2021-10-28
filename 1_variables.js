@@ -15,6 +15,7 @@ const var3;
 //  Инициализация
 var2 = 10;
 var2 += 100;
+console.log(var2);
 
 //  Присвоение
 var2 = 7;
