@@ -17,6 +17,9 @@ var2 = 10;
 var2 += 100;
 console.log(var2);
 
+
+b = 10;
+
 //  Присвоение
 var2 = 7;
 var1 = var2 - 10;
